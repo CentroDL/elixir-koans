@@ -4,19 +4,20 @@ defmodule Atoms do
   @intro "Atoms"
 
   koan "Atoms are constants where their name is their own value" do
+    # like symbols?
     adam = :human
-    assert adam == ___
+    assert adam == :human
   end
 
   koan "It is surprising to find out that booleans are atoms" do
-    assert is_atom(true) == ___
-    assert is_boolean(false) == ___
-    assert true == ___
-    assert false == ___
+    assert is_atom(true) == true
+    assert is_boolean(false) == :true
+    assert true == :true
+    assert false == :false
   end
 
   koan "Like booleans, the nil value is also an atom" do
-    assert is_atom(nil) == ___
-    assert nil == ___
+    assert is_atom(nil) == true
+    assert nil == :nil
   end
 end
